@@ -16,12 +16,18 @@ export class UsersListComponent implements OnInit {
   }
   getUsers(): void {
     this.userService.getUsers().subscribe(response => {
-      this.users = response
+      this.users = response;
+    }, (err) => {
+      console.log('Erro ao executar', err.status)
     })
   }
   deleteUser(id: number): void {
     this.userService.deleteUser(id).subscribe(response => {
       console.log('Usuario excluido')
+    }, (err) => {
+      console.log(err)
+    }, () => {
+      this.getUsers();
     })
   }
 }
