@@ -8,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class DataBindingComponent implements OnInit {
   text = 'José Mario';
   imageUrl = 'https://picsum.photos/300/300'
-  imageDesc = 'essa é a imagem'
+  imageDesc = 'essa é a imagem';
+  buttonText = 'Clique aqui';
+  textRed = 'textred';
+  bgColor = 'green';
+  fontSize = '20px';
+  widthImg = 600
 
   constructor() { }
 
@@ -16,7 +21,8 @@ export class DataBindingComponent implements OnInit {
   }
 
   clicou(value: any) {
-    console.log('clicou aqui', value)
+    console.log('clicou aqui', value);
+    
     
   }
 
