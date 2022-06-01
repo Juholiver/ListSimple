@@ -4,7 +4,7 @@ import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { ThisReceiver } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-user-form',
@@ -12,10 +12,9 @@ import { ThisReceiver } from '@angular/compiler';
   styleUrls: ['./user-form.component.css']
 })
 export class UserFormComponent implements OnInit {
-
   userForm: FormGroup;
   users: Array<User> = []
-  userId: number | any
+  userId: any = '';
   constructor(private fb: FormBuilder, 
     private userService: UserService, 
     private actRoute: ActivatedRoute,
@@ -50,11 +49,11 @@ export class UserFormComponent implements OnInit {
 
   getUsers() {
     this.userService.getUsers().subscribe(response => {
-      this.users = response
+      this.users = response;
     })
   }
 
-  createUser(){
+  createUser() {
     this.userForm.get('id')?.patchValue(this.users.length + 1)
     this.userService.postUser(this.userForm.value).subscribe(result => {
       console.log(`Usuario ${result.nome} ${result.sobrenome} cadastrado com sucesso!!`)
