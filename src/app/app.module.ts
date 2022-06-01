@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 import { TodoItemComponent } from './pages/todo/todo-item/todo-item.component';
 import { TodoListComponent } from './pages/todo/todo-list/todo-list.component';
+import { ButtonComponent } from './components/button/button.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { TodoListComponent } from './pages/todo/todo-list/todo-list.component';
     DataBindingComponent,
     TodoItemComponent,
     TodoListComponent,
+    ButtonComponent,
     
   ],
   imports: [

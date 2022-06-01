@@ -27,5 +27,8 @@ export class DataBindingComponent implements OnInit {
     
     
   }
+  clicouNoFilho(text: any) {
+    console.log(text)
+  }
 
 }
