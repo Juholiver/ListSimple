@@ -13,6 +13,7 @@ import { TodoItemComponent } from './pages/todo/todo-item/todo-item.component';
 import { TodoListComponent } from './pages/todo/todo-list/todo-list.component';
 import { ButtonComponent } from './components/button/button.component';
 import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { LifeCycleComponent } from './components/life-cycle/life-cycle.component
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
