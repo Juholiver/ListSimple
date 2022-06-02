@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http'
 
@@ -22,6 +22,7 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon';
 import { PipesExampleComponent } from './pages/pipes-example/pipes-example.component'
 import { UpperCasePipe } from '@angular/common';
+import { PrintListPipe } from './print-list.pipe';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { UpperCasePipe } from '@angular/common';
     ButtonComponent,
     LifeCycleComponent,
     PipesExampleComponent,
+    PrintListPipe,
     
   ],
   imports: [
