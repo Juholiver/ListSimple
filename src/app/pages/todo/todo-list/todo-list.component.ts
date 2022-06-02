@@ -19,9 +19,18 @@ export class TodoListComponent implements OnInit {
   ngOnInit(): void {
   }
   addTodo(title: string) {
-    this.todo.id = this.todos.length + 1
-    this.todo.title
-    this.todos.push(this.todo);
+    const id =this.todos.length + 1
+    this.todos.push({
+      id: id,
+      title: title,
+      done: false
+    });
     console.log(this.todos)
+  }
+
+  removeTodo(todo: any) {
+    console.log('O elemento pai recebeu', todo)
+    let index = this.todos.indexOf(todo)
+    this.todos.splice(index, 1)
   }
 }
